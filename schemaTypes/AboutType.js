@@ -14,14 +14,7 @@ export const AboutType = defineType({
             name: "projectsCompleted",
             title: "Projects Completed",
             type: "array",
-            of: [
-                defineField({
-                    name: "project",
-                    title: "Project",
-                    type: "project",
-                    to: [{type: "project"}]
-                }),
-            ],
+            of: [{ type: "reference", to: [{ type: "project" }] }],
         }),
         defineField({
             name: "mission",

@@ -23,15 +23,8 @@ export const ProjectType = defineType({
         defineField({
             name: "projectType",
             title: "Project Type",
-            type: "string",
-            options: {
-                list: [
-                    { title: 'Container', value: 'container' },
-                    { title: 'Car', value: 'car' },
-                    { title: 'Truck', value: 'truck' },
-                ],
-                layout: 'dropdown',
-            }
+            type: "reference",
+            to: [{ type: "category" }],
         }),
         defineField({
             name: "gallery",
@@ -51,14 +44,8 @@ export const ProjectType = defineType({
         defineField({
             name: "truckType",
             title: "Truck Type",
-            type: "string",
-            options: {
-                list: [
-                    { title: 'Pick Up Truck', value: 'pick up truck' },
-                    { title: 'Truck', value: 'truck' },
-                ],
-                layout: 'dropdown',
-            }
+            type: "reference",
+            to: [{ type: "truckType" }],
         }),
         defineField({
             name: "clientCompany",
@@ -73,4 +60,17 @@ export const ProjectType = defineType({
     ],
 });
 
+
+export const TruckType = defineType({
+    name: "truckType",
+    title: "Truck Type",
+    type: "document",
+    fields: [
+        defineField({
+            name: "title",
+            title: "Title",
+            type: "string",
+        }),
+    ],
+});
 

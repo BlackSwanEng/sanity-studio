@@ -1,5 +1,5 @@
 import {ProductType} from './ProductType'
-import {ProjectType} from './ProjectType'
+import {ProjectType, TruckType} from './ProjectType'
 import {
   HomeType,
   heroSection,
@@ -9,6 +9,7 @@ import {
 } from './HomeType';
 import {AboutType} from './AboutType'
 import { ContactUsType } from './ContactUs';
+import { CategoryType } from './CategoryType';
 
 
 
@@ -21,5 +22,7 @@ export const schemaTypes = [
   projectsCounter,
   testimonialsSection,
   AboutType,
-  ContactUsType
+  ContactUsType,
+  CategoryType,
+  TruckType
 ]
